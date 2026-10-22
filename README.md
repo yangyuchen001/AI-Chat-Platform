@@ -7,3 +7,8 @@ P0「开发基础与工程工作流」的持续项目落地：用最小增量把
 - `src/` — 源代码
 - `tests/` — 测试
 - `docs/` — 文档
+
+## 运行
+
+uv sync
+uv run python -m application.main dev
