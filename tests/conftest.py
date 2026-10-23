@@ -12,10 +12,11 @@ REQUIRED_ENV = ["APP_ENV", "DATABASE_URL", "LLM_API_KEY"]
 def isolated_env(monkeypatch, tmp_path):
     """给 env_check 一个干净的运行环境：
 
-    - cwd 切到空沙盒——项目根的 .env 不会被 load_dotenv 打扫进来
+    - load_dotenv 替换为空操作——它默认按调用者文件位置向上搜索，
+      会爬到项目根找到真 .env（测试必须切断这条供给线）
     - 三个必需变量清空——不受开发机真实环境影响
     """
-    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr("application.env_check.load_dotenv", lambda: None)
     for name in REQUIRED_ENV:
         monkeypatch.delenv(name, raising=False)
     return tmp_path
