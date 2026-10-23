@@ -1,6 +1,6 @@
 # AI Chat Platform (P18.1)
 
-P0「开发基础与工程工作流」的持续项目落地：一个真实项目，逐步长成 AI Chat Platform。
+P0「开发基础与工程工作流」的持续项目落地：工程基础优先，一个真实项目逐步长成 AI Chat Platform。
 
 ## 目录
 
