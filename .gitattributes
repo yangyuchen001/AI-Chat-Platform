@@ -1,0 +1,6 @@
+# 统一行尾：仓库内一律 LF（P0.21 清算 CRLF 债——案例 02 结案）
+# text=auto：git 自动识别文本文件，入库时统一转 LF，工作副本由各平台自行转换
+* text=auto
+
+# 脚本强制 LF——shebang 不能容忍 CR，dev.sh 的生死线
+*.sh text eol=lf
