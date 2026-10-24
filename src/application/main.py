@@ -9,7 +9,9 @@ from application.logging_setup import setup_logging
 
 def main() -> int:
     if len(sys.argv) < 2:
-        print("用法: python -m application.main [--version | <环境名>]", file=sys.stderr)
+        print(
+            "用法: python -m application.main [--version | <环境名>]", file=sys.stderr
+        )
         print("错误: 缺少参数", file=sys.stderr)
         return 1
 

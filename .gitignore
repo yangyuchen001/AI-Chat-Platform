@@ -6,4 +6,7 @@ __pycache__/
 .venv/
 
 # 本地配置与密钥（P0.17 引入）
-.env.pytest_cache/
+.env
+
+# 测试缓存（P0.19 引入；P0.21 修复：曾被 Add-Content 拼进上一行）
+.pytest_cache/
